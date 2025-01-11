@@ -90,6 +90,10 @@ header nav ul li a:hover {
   header nav ul li:not(:last-child) {
     border-bottom: 1px solid rgba(119, 117, 117, 0.3);
   }
+  header nav ul li a.active,
+  header nav ul li a:hover {
+    border-bottom: none;
+  }
   header nav ul li a {
     color: black;
   }
