@@ -34,6 +34,9 @@ html {
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
+img {
+  max-width: 100%;
+}
 ul {
   list-style: none;
 }
@@ -240,7 +243,7 @@ header nav ul li a:hover {
   border: none;
   background-color: var(--main-color);
 }
-.services-list {
+.services .services-list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,15 +251,61 @@ header nav ul li a:hover {
   gap: 70px;
   margin-top: 70px;
 }
-.services-list .service {
+.services .services-list .service {
   display: flex;
   gap: 40px;
 }
-.services-list .service h3 {
+.services .services-list .service h3 {
   margin-bottom: 30px;
   color: var(--main-color);
 }
-.services-list .service p {
+.services .services-list .service p {
   line-height: 2;
   color: #777;
+}
+.design * {
+  z-index: 10;
+}
+.design {
+  display: flex;
+  align-items: center;
+  background-image: url(../images/design-features.webp);
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+.design::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.545);
+}
+.design .image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 800px;
+  flex: 1;
+}
+@media (max-width: 991px) {
+  .design .image {
+    display: none;
+  }
+}
+.design .info {
+  flex: 1;
+  padding: 50px;
+  color: white;
+  background-color: var(--transparent-color);
+}
+.design .info h3 {
+  margin-bottom: 40px;
+}
+.design .info div {
+  display: flex;
+  gap: 20px;
+  padding: 15px 0;
 }
