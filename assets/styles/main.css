@@ -376,3 +376,6 @@ section.video div a {
   color: white;
   background-color: black;
 }
+.about-us {
+  padding-bottom: 0;
+}
